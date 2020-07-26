@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/bootstrap.css')}}">
+	<style type="text/css" media="screen">
+
+
+	.im{background-size: cover;background-repeat: no-repeat;width: 200px; height: 200px;margin:auto;border-radius:180px;margin-top: 20px;}
+	#in{width: 30px;height: 30px;}
+	h5{color: #3b5998;}
+		
+	</style>
+</head>
+<body>
+		<div class="container border border-info">
+			<div class="row border">
+				<div class="col text-white font-weight-bold text-center header pt-3" style="background-color: #3b5998;">
+					<h3>Developer Profile</h3>
+				</div>
+			
+			</div>
+			<div class="row">
+					<img class="im" src="{{url_for('static',filename='img/shani.jpg')}}">
+
+
+			</div>
+
+			
+			<div class="row">
+				<div class="col-3 offset-1 mt-4 col-md-2 offset-md-3">
+					<h5>Name: </h5>
+				</div>
+
+				<div class="col-8 mt-4 col-md offset-md-1" style="font-size 15px;">
+					Shani Kumar
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 offset-1 mt-4 col-md-2 offset-md-3">
+					<h5>Profile:</h5>
+				</div>
+
+				<div class="col-8 mt-4 col-md offset-md-1" style="font-size:15px;">
+					B.tech(Computer Science Eng)
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 offset-1 mt-4 col-md-2 offset-md-3">
+					<img id="in" src="{{url_for('static',filename='img/linkedin.png')}}">
+				</div>
+
+				<div class="col-8 mt-4 col-md offset-md-1" style="font-size:15px;">
+					<a href="https://www.linkedin.com/in/shani-kumar-bharati-668025191">linkedin profile</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 offset-1 mt-4 col-md-2 offset-md-3">
+					<img id="in" src="{{url_for('static',filename='img/insta.png')}}">
+				</div>
+
+				<div class="col-8 mt-4 col-md offset-md-1" style="font-size :15px;">
+					<a href="https://instagram.com/shanikumar02">Instagram id</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 offset-1 mt-4 col-md-2 offset-md-3">
+					<img id="in" src="{{url_for('static',filename='img/twitter.png')}}">
+				</div>
+
+				<div class="col-8 mt-4 col-md offset-md-1 mb-5" style="font-size:15px;">
+					<a href="https://www.twitter.com/@Shanikumar537">twitter profile</a>
+				</div>
+			
+		</div>
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Welcome to the translator
+		
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styles/bootstrap.css')}}">
+	<!-- <link rel="stylesheet" type="text/css" href="bootstrap-grid.css"> -->
+	<style type="text/css">
+		
+		.container{border: 4px solid;border-color:#3b5998;  border-style: ridge;background-color:white;}
+
+		label{font-size:20px; color:#3b5998; font-weight: bold;}
+		#main{background-color: #3b5998; border-bottom:2px solid black;}
+		
+	</style>
+
+</head>
+<body>
+	
+	<form action="{{url_for('translate')}}" method="post">
+	<div class="container">
+		<div class="row row-cols-1 sticky-top" style="background-color:#3b5998;" id="main">
+			<div class="col text-center h1 font-weight-bolder mt-2" style="font-size:50px;font-family:calibri;color:white;">
+				Translator
+			</div>
+			<div class="col text-center" style="color:white;">anywhere in the World!</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 offset-md-3 mt-3 pt-2">
+				<label class="l">Source Language</label>
+			</div>
+		</div>
+		
+			<div class="row">
+
+				<div class="col-md-5 offset-md-3  mt-3">
+					<div class="form-group">
+						<select class="form-control" name="a">
+							<option value="en">english</option>
+							<option value="hi">hindi</option>
+							<option value='af'>afrikaans</option>
+							<option value='sq'>albanian</option>
+							<option value='am'>amharic</option>
+							<option value='ar'>arabic</option>
+							<option value='hy'>armenian</option>
+							<option value='az'>azerbaijani</option>
+							<option value='eu'>basque</option>
+							<option value='be'>belarusian</option>
+							<option value='bn'>bengali</option>
+							<option value='bs'>bosnian</option>
+							<option value='bg'>bulgarian</option>
+							<option value='ca'>catalan</option>
+							<option value='ceb'>cebuano</option>
+							<option value='ny'>chichewa</option>
+							<option value='zh-cn'>chinese (simplified)</option>
+							<option value='zh-tw'>chinese (traditional)</option>
+							<option value='co'>corsican</option>
+							<option value='hr'>croatian</option>
+							<option value='cs'>czech</option>
+							<option value='da'>danish</option>
+							<option value='nl'>dutch</option>
+							<option value='eo'>esperanto</option>
+							<option value='et'>estonian</option>
+							<option value='tl'>filipino</option>
+							<option value='fi'>finnish</option>
+							<option value='fr'>french</option>
+							<option value='fy'>frisian</option>
+							<option value='gl'>galician</option>
+							<option value='ka'>georgian</option>
+							<option value='de'>german</option>
+							<option value='el'>greek</option>
+							<option value='gu'>gujarati</option>
+							<option value='ht'>haitian creole</option>
+							<option value='ha'>hausa</option>
+							<option value='haw'>hawaiian</option>
+							<option value='iw'>hebrew</option>
+							<option value='he'>hebrew</option>
+							<option value='hmn'>hmong</option>
+							<option value='hu'>hungarian</option>
+							<option value='is'>icelandic</option>
+							<option value='ig'>igbo</option>
+							<option value='id'>indonesian</option>
+							<option value='ga'>irish</option>
+							<option value='it'>italian</option>
+							<option value='ja'>japanese</option>
+							<option value='jw'>javanese</option>
+							<option value='kn'>kannada</option>
+							<option value='kk'>kazakh</option>
+							<option value='km'>khmer</option>
+							<option value='ko'>korean</option>
+							<option value='ku'>kurdish (kurmanji)</option>
+							<option value='ky'>kyrgyz</option>
+							<option value='lo'>lao</option>
+							<option value='la'>latin</option>
+							<option value='lv'>latvian</option>
+							<option value='lt'>lithuanian</option>
+							<option value='lb'>luxembourgish</option>
+							<option value='mk'>macedonian</option>
+							<option value='mg'>malagasy</option>
+							<option value='ms'>malay</option>
+							<option value='ml'>malayalam</option>
+							<option value='mt'>maltese</option>
+							<option value='mi'>maori</option>
+							<option value='mr'>marathi</option>
+							<option value='mn'>mongolian</option>
+							<option value='my'>myanmar (burmese)</option>
+							<option value='ne'>nepali</option>
+							<option value='no'>norwegian</option>
+							<option value='or'>odia</option>
+							<option value='ps'>pashto</option>
+							<option value='fa'>persian</option>
+							<option value='pl'>polish</option>
+							<option value='pt'>portuguese</option>
+							<option value='pa'>punjabi</option>
+							<option value='ro'>romanian</option>
+							<option value='ru'>russian</option>
+							<option value='sm'>samoan</option>
+							<option value='gd'>scots gaelic</option>
+							<option value='sr'>serbian</option>
+							<option value='st'>sesotho</option>
+							<option value='sn'>shona</option>
+							<option value='sd'>sindhi</option>
+							<option value='si'>sinhala</option>
+							<option value='sk'>slovak</option>
+							<option value='sl'>slovenian</option>
+							<option value='so'>somali</option>
+							<option value='es'>spanish</option>
+							<option value='su'>sundanese</option>
+							<option value='sw'>swahili</option>
+							<option value='sv'>swedish</option>
+							<option value='tg'>tajik</option>
+							<option value='ta'>tamil</option>
+							<option value='te'>telugu</option>
+							<option value='th'>thai</option>
+							<option value='tr'>turkish</option>
+							<option value='uk'>ukrainian</option>
+							<option value='ur'>urdu</option>
+							<option value='ug'>uyghur</option>
+							<option value='uz'>uzbek</option>
+							<option value='vi'>vietnamese</option>
+							<option value='cy'>welsh</option>
+							<option value='xh'>xhosa</option>
+							<option value='yi'>yiddish</option>
+							<option value='yo'>yoruba</option>
+							<option value='zu'>zulu</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-5 offset-md-3 mt-3 pt-2">
+					<label class="l">Destination Language</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-5 offset-md-3  mt-3">
+					<div class="form-group">
+							<select class="form-control" name="b" id="sel">
+								<option value="hi">hindi</option>
+								<option value="en">english</option>
+								<option value='af'>afrikaans</option>
+								<option value='sq'>albanian</option>
+								<option value='am'>amharic</option>
+								<option value='ar'>arabic</option>
+								<option value='hy'>armenian</option>
+								<option value='az'>azerbaijani</option>
+								<option value='eu'>basque</option>
+								<option value='be'>belarusian</option>
+								<option value='bn'>bengali</option>
+								<option value='bs'>bosnian</option>
+								<option value='bg'>bulgarian</option>
+								<option value='ca'>catalan</option>
+								<option value='ceb'>cebuano</option>
+								<option value='ny'>chichewa</option>
+								<option value='zh-cn'>chinese (simplified)</option>
+								<option value='zh-tw'>chinese (traditional)</option>
+								<option value='co'>corsican</option>
+								<option value='hr'>croatian</option>
+								<option value='cs'>czech</option>
+								<option value='da'>danish</option>
+								<option value='nl'>dutch</option>
+								<option value='eo'>esperanto</option>
+								<option value='et'>estonian</option>
+								<option value='tl'>filipino</option>
+								<option value='fi'>finnish</option>
+								<option value='fr'>french</option>
+								<option value='fy'>frisian</option>
+								<option value='gl'>galician</option>
+								<option value='ka'>georgian</option>
+								<option value='de'>german</option>
+								<option value='el'>greek</option>
+								<option value='gu'>gujarati</option>
+								<option value='ht'>haitian creole</option>
+								<option value='ha'>hausa</option>
+								<option value='haw'>hawaiian</option>
+								<option value='iw'>hebrew</option>
+								<option value='he'>hebrew</option>
+								<option value='hmn'>hmong</option>
+								<option value='hu'>hungarian</option>
+								<option value='is'>icelandic</option>
+								<option value='ig'>igbo</option>
+								<option value='id'>indonesian</option>
+								<option value='ga'>irish</option>
+								<option value='it'>italian</option>
+								<option value='ja'>japanese</option>
+								<option value='jw'>javanese</option>
+								<option value='kn'>kannada</option>
+								<option value='kk'>kazakh</option>
+								<option value='km'>khmer</option>
+								<option value='ko'>korean</option>
+								<option value='ku'>kurdish (kurmanji)</option>
+								<option value='ky'>kyrgyz</option>
+								<option value='lo'>lao</option>
+								<option value='la'>latin</option>
+								<option value='lv'>latvian</option>
+								<option value='lt'>lithuanian</option>
+								<option value='lb'>luxembourgish</option>
+								<option value='mk'>macedonian</option>
+								<option value='mg'>malagasy</option>
+								<option value='ms'>malay</option>
+								<option value='ml'>malayalam</option>
+								<option value='mt'>maltese</option>
+								<option value='mi'>maori</option>
+								<option value='mr'>marathi</option>
+								<option value='mn'>mongolian</option>
+								<option value='my'>myanmar (burmese)</option>
+								<option value='ne'>nepali</option>
+								<option value='no'>norwegian</option>
+								<option value='or'>odia</option>
+								<option value='ps'>pashto</option>
+								<option value='fa'>persian</option>
+								<option value='pl'>polish</option>
+								<option value='pt'>portuguese</option>
+								<option value='pa'>punjabi</option>
+								<option value='ro'>romanian</option>
+								<option value='ru'>russian</option>
+								<option value='sm'>samoan</option>
+								<option value='gd'>scots gaelic</option>
+								<option value='sr'>serbian</option>
+								<option value='st'>sesotho</option>
+								<option value='sn'>shona</option>
+								<option value='sd'>sindhi</option>
+								<option value='si'>sinhala</option>
+								<option value='sk'>slovak</option>
+								<option value='sl'>slovenian</option>
+								<option value='so'>somali</option>
+								<option value='es'>spanish</option>
+								<option value='su'>sundanese</option>
+								<option value='sw'>swahili</option>
+								<option value='sv'>swedish</option>
+								<option value='tg'>tajik</option>
+								<option value='ta'>tamil</option>
+								<option value='te'>telugu</option>
+								<option value='th'>thai</option>
+								<option value='tr'>turkish</option>
+								<option value='uk'>ukrainian</option>
+								<option value='ur'>urdu</option>
+								<option value='ug'>uyghur</option>
+								<option value='uz'>uzbek</option>
+								<option value='vi'>vietnamese</option>
+								<option value='cy'>welsh</option>
+								<option value='xh'>xhosa</option>
+								<option value='yi'>yiddish</option>
+								<option value='yo'>yoruba</option>
+								<option value='zu'>zulu</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 offset-md-3  mt-3 pt-2">
+						<button type="submit" name="btn" value="speak" style="background-color: white;border:2px solid white;">
+							<img src="{{url_for('static',filename='img/mic.png')}}" style="width:25px;height:30px;background-color: white;"></button>{{sp}}
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-5 offset-md-3  mt-3">
+						<div class="form-group">
+							<textarea class="form-control" rows="6" placeholder="Type here......" name="txtarea" id="tx">{{out}}</textarea>
+			
+						</div>
+					</div>
+				</div>
+		
+
+		
+			<div class="row ">
+				<div class="col-md-5 offset-md-3 mt-3">
+					<div class="form-group ">
+					<button type="submit" value="Translate" class="btn btn-success" name="btn">Translate</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row ">
+				<div class="col-md-5 offset-md-3  mt-3">
+					<div class="form-group">
+						<textarea class="form-control overflow-auto" rows="6" readonly>{{r}}</textarea>
+		</form>
+					</div>
+				
+				</div>
+			</div>
+		
+		<form action="/profile" method="post">
+			<div class="row">
+				<div class="col col-md offset-md-3">
+					<button class="btn btn-info btn-sm pt-1 mb-3">Developer profile </button>
+				</div>		
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
