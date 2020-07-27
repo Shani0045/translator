@@ -2,7 +2,7 @@ googletrans==3.0.0
 playsound==1.2.2
 Flask==1.1.2
 SpeechRecognition==3.8.1
-pyaudio==0.2.10
+PyAudio-0.2.11-cp36-cp36m-win_amd64.whl
 gunicorn==19.9.0
 itsdangerous==1.1.0
 MarkupSafe==1.1.1
