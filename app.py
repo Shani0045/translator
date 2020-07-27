@@ -1,6 +1,4 @@
 from flask import*
-import speech_recognition as sr
-import pyaudio
 from playsound import playsound
 from googletrans import Translator
 app=Flask(__name__)
@@ -12,21 +10,7 @@ def home():
 
 @app.route("/translate",methods=["POST"])
 def translate():
-    if request.form['btn']=="speak":
-        val=request.form['a']
-        r=sr.Recognizer()
-        with sr.Microphone() as src:
-            r.adjust_for_ambient_noise(src)
-            playsound("say.mp3")
-            audio=r.listen(src)
-            playsound("time1.mp3")
-            try:
-                a=r.recognize_google(audio,language=val)
-                return render_template("index.html",out=a)
-            except:
-                return redirect(url_for("home"))
-                       
-    elif request.form['btn']=="Translate":
+    if request.form['btn']=="Translate":
             try:
                 t=Translator()
                 txt1=request.form['a']
