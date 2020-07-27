@@ -1,5 +1,6 @@
 from flask import*
 import speech_recognition as sr
+import pyaudio
 from playsound import playsound
 from googletrans import Translator
 app=Flask(__name__)
