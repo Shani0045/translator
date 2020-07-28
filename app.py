@@ -8,7 +8,7 @@ def home():
     return render_template("index.html")
    
 
-@app.route("/translate",methods=["POST"])
+@app.route("/",methods=["POST"])
 def translate():
     if request.form['btn']=="Translate":
             try:
